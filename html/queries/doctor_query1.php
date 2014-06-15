@@ -1,13 +1,11 @@
 <?php
 $q = $_GET['q'];
 
-$con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
+$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-//mysqli_select_db($con,"hospital");
-//$sql="SELECT * FROM Take WHERE TName='Brain Surgery'";
 $sql="SELECT * FROM Take WHERE TName='".$q."'";
 $result = mysqli_query($con,$sql);
 

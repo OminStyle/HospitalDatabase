@@ -7,7 +7,7 @@
     <title>Hospital</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +17,27 @@
       <![endif]-->
 
     <script>
-    function showUser(str) {
+    function showQueryOptions(query) {
+        if (str=="") {
+            document.getElementById("queryOptions").innerHTML="";
+            return;
+        } 
+        if (window.XMLHttpRequest) {
+          // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        } else { // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                document.getElementById("queryOptions").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        xmlhttp.send();
+    }
+
+    function showData(str) {
         if (str=="") {
             document.getElementById("txtHint").innerHTML="";
             return;
@@ -57,9 +77,8 @@
                 <option value="Query7">Query7</option>
             </select>
         </form>
-        <?php include ("queries/doctor_queryOption1.php"); ?>
       <br>
-      <div id="txtHint"><b>Person info will be listed here.</b></div>
+      <div id="queryOptions"><b>Please make a selection.</b></div>
 
   </div>
 
