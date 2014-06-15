@@ -31,7 +31,7 @@
         xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
                 document.getElementById("queryOptions").innerHTML=xmlhttp.responseText;
-            }
+            } 
         }
         if (query == "Query1") {
             xmlhttp.open("GET","queries/doctor_queryOption1.php?q="+query,true);
