@@ -7,7 +7,7 @@
     <title>Hospital</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,21 +35,28 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <form action="patient_output.php" method="post">
-      <select name="patient_select_name">
+      Find Patient name: <select name="patient_select_name">
       <?php list_patient_id() ?>
       </select>
       <input type="submit">
     </form>
 
     <form action="patient_output.php" method="post">
-      <select name="patient_select_id">
+      Find Patient ID: <select name="patient_select_id">
       <?php list_patient_name() ?>
       </select>
       <input type="submit">
     </form>
 
     <form action="patient_output.php" method="post">
-      <select name="patient_select_id_name">
+      Find patient's disease and treatment: <select name="patient_select_id_name">
+      <?php list_patient_id_name() ?>
+      </select>
+      <input type="submit">
+    </form>
+
+    <form action="patient_output.php" method="post">
+      Find doctor: <select name="find_doctor">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
@@ -69,7 +76,6 @@
  */
 function list_patient_id() {
   $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
-  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";
@@ -94,7 +100,6 @@ function list_patient_id() {
  */
 function list_patient_name() {
   $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
-  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PName";
@@ -118,9 +123,7 @@ function list_patient_name() {
  * @return MySQL object
  */
 function list_patient_id_name() {
-  // echo "list_patient_id()";
   $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
-  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";
@@ -136,4 +139,3 @@ function list_patient_id_name() {
   $mysqli->close();
 }
 ?>
-

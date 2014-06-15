@@ -34,9 +34,9 @@
             } 
         }
         if (query == "Query1") {
-            xmlhttp.open("GET","patient_queries/patient_query1.php?q="+query,true);
+            xmlhttp.open("GET","patient_queries/patient_queryOption1.php?q="+query,true);
         } else if (query == "Query2") {
-            xmlhttp.open("GET","patient_queries/patient_query2.php?q="+query,true);
+            xmlhttp.open("GET","patient_queries/patient_queryOption2.php?q="+query,true);
         }
         
         xmlhttp.send();
@@ -58,7 +58,7 @@
                 document.getElementById("queryData").innerHTML=xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        xmlhttp.open("GET","patient_queries/patient_query1.php?q="+str,true);
         xmlhttp.send();
     }
 </script>
