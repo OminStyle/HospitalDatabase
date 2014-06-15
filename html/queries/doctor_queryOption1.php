@@ -1,6 +1,8 @@
 <?php
-echo '<form>';
-echo '<select name="Take" onchange="showQueryOptions(this.value)">';
+$q = $_GET['q'];
+echo '<b>Make a selection:</b>
+<form>
+<select name="Take" onchange="showData(this.value)">';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
@@ -19,5 +21,5 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='txtHint1'><b>Person info will be listed here.</b></div>"
+      <div id='queryData'><b>Treatment and medicine info will be listed here.</b></div>"
 ?>

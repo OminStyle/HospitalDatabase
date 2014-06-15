@@ -18,7 +18,7 @@
 
     <script>
     function showQueryOptions(query) {
-        if (str=="") {
+        if (query=="") {
             document.getElementById("queryOptions").innerHTML="";
             return;
         } 
@@ -33,13 +33,16 @@
                 document.getElementById("queryOptions").innerHTML=xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        if (query == "Query1") {
+            xmlhttp.open("GET","queries/doctor_queryOption1.php?q="+query,true);
+        }
+        
         xmlhttp.send();
     }
 
     function showData(str) {
         if (str=="") {
-            document.getElementById("txtHint").innerHTML="";
+            document.getElementById("queryData").innerHTML="";
             return;
         } 
         if (window.XMLHttpRequest) {
@@ -50,7 +53,7 @@
         }
         xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-                document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                document.getElementById("queryData").innerHTML=xmlhttp.responseText;
             }
         }
         xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
@@ -66,8 +69,10 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
+          <b>Select a query:</b>
         <form>
             <select name="Queries" onchange="showQueryOptions(this.value)">
+                <option value=""></option>
                 <option value="Query1">Query1</option>
                 <option value="Query2">Query2</option>
                 <option value="Query3">Query3</option>
@@ -78,7 +83,7 @@
             </select>
         </form>
       <br>
-      <div id="queryOptions"><b>Please make a selection.</b></div>
+      <div id="queryOptions"></div>
 
   </div>
 
