@@ -125,7 +125,7 @@ function find_patient_doctor() {
 
   $sql = "SELECT    h.HSID, h.HName, a.PID, a.PName
           FROM    HospitalStaff h, Doctor d, Assigned_Patient a, Diagnose di
-          WHERE   h.HSID=d.HSID and d.HSID=di.HSID and di.PID = a.PID AND a.PID = 1";
+          WHERE   h.HSID=d.HSID and d.HSID=di.HSID and di.PID = a.PID AND a.PID = " . $pid;
 
   $result = mysqli_query($mysqli, $sql);
 
