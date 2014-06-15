@@ -68,9 +68,8 @@
  * @return MySQL object
  */
 function list_patient_id() {
-  // echo "list_patient_id()";
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";
@@ -94,9 +93,8 @@ function list_patient_id() {
  * @return MySQL object
  */
 function list_patient_name() {
-  // echo "list_patient_id()";
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PName";
@@ -121,8 +119,8 @@ function list_patient_name() {
  */
 function list_patient_id_name() {
   // echo "list_patient_id()";
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";

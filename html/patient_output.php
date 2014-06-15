@@ -44,8 +44,8 @@
 
 <?php
 function find_patient_name() {
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $pid = $_POST["patient_select_name"];
 
@@ -61,8 +61,8 @@ function find_patient_name() {
 }
 
 function find_patient_id() {
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $name = $_POST["patient_select_id"];
 
@@ -87,8 +87,8 @@ function find_patient_id() {
  * These functions require variables passed in from html variables using the $_POST[(variable name)];
  */
 function patient_treatment() {
-  // $mysqli = mysqli_connect("54.201.137.130", "root", "eece304Rocks!", "hospital");
-  $mysqli = mysqli_connect("localhost", "root", "", "hospital");
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  // $mysqli = mysqli_connect("localhost", "root", "", "hospital");
 
   $name = $_POST["patient_select_id_name"];
 
