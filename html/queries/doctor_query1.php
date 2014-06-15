@@ -1,4 +1,5 @@
 <?php
+// medicines/drugs are associated with specific treatment
 $q = $_GET['q'];
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');

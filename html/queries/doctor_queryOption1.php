@@ -1,4 +1,5 @@
 <?php
+// medicines/drugs are associated with specific treatment
 $q = $_GET['q'];
 echo '<b>Make a selection:</b>
 <form>
