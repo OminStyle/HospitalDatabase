@@ -37,12 +37,14 @@
             xmlhttp.open("GET","queries/doctor_queryOption1.php?q="+query,true);
         } else if (query == "Query2") {
             xmlhttp.open("GET","queries/doctor_queryOption2.php?q="+query,true);
+        } else if (query == "Query4") {
+            xmlhttp.open("GET","queries/doctor_queryOption4.php?q="+query,true);
         }
         
         xmlhttp.send();
     }
 
-    function showData(str) {
+    function showData(str, query) {
         if (str=="") {
             document.getElementById("queryData").innerHTML="";
             return;
@@ -58,7 +60,11 @@
                 document.getElementById("queryData").innerHTML=xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        if (query === "Query1") {
+            xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        } else if (query === "Query4") {
+            xmlhttp.open("GET","queries/doctor_query4.php?q="+str,true);
+        } 
         xmlhttp.send();
     }
 </script>
