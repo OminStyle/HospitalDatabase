@@ -1,20 +1,22 @@
 <?php
 $q = $_GET['q'];
 
-$con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
+$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
 //mysqli_select_db($con,"hospital");
-//$sql="SELECT * FROM Disease WHERE DName='HIV'";
-$sql="SELECT * FROM Disease WHERE DName='".$q."'";
+//$sql="SELECT DID, DName FROM Disease WHERE DName='HIV'";
+$sql="SELECT d.DID, d.DName 
+      FROM Disease d
+      WHERE d.DName='".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
 <tr>
-  <th>Disease Index</th>
-  <th>Disease Name</th>
+  <th>DID</th>
+  <th>DName</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result)) {
@@ -26,4 +28,4 @@ while($row = mysqli_fetch_array($result)) {
 echo "</table>";
 
 mysqli_close($con);
-?
+?>

@@ -47,6 +47,12 @@
     else if($_POST["find_doctor"]) {
       find_patient_doctor();
     }
+    else if($_POST["lookup_patient_medicine"] != NULL) {
+      lookup_patient_medicine();
+    }
+    else {
+      find_most_famous_doctor();
+    }
     ?>
 
   </body>
@@ -131,6 +137,44 @@ function find_patient_doctor() {
 
   while($row = mysqli_fetch_array($result)) {
     echo $row['HSID'] . " " . $row['HName'] . " " . $row['PName'];
+  }
+
+  /* close connection */
+  $mysqli->close();
+}
+
+function lookup_patient_medicine() {
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $pid = $_POST["lookup_patient_medicine"];
+
+  $sql = "SELECT  m.MName, m.Dosage
+          FROM    Medicine m, Assigned_Patient a, Take t, Diagnose d, CureUsing_Treatment c
+          WHERE   a.PID=d.PID and d.DID=c.DID and t.TName =c.TName and t.MName=m.MName and a.PID= " . $pid;
+
+  $result = mysqli_query($mysqli, $sql);
+
+  while($row = mysqli_fetch_array($result)) {
+    echo $row['MName'] . " " . $row['Dosage'];
+  }
+
+  /* close connection */
+  $mysqli->close();
+}
+
+function find_most_famous_doctor() {
+  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+
+  $sql = "SELECT  HName
+          FROM    HospitalStaff h, DIagnose d
+          Where   h.HSID = d.HSID 
+          Group by  d.HSID
+          Having  count(PID) >= ALL (Select Count(PID)
+                                     From Diagnose
+                                     Group By HSID)";
+  $result = mysqli_query($mysqli, $sql);
+
+  while($row = mysqli_fetch_array($result)) {
+    echo $row['HName'];
   }
 
   /* close connection */
