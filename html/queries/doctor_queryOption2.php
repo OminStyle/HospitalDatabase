@@ -3,7 +3,7 @@ echo '<form>';
 echo '<select name="Query2" onchange="showData(this.value, this.name)">';
 
 
-$con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
+$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
@@ -20,5 +20,6 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='txtHint1'><b>Person info will be listed here.</b></div>"
+      <div id='txtHint1'><b>Disease Index and Disease will be listed here.</b></div>"
 ?>
+
