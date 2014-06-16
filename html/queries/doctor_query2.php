@@ -7,8 +7,8 @@ if (!$con) {
 }
 
 //mysqli_select_db($con,"hospital");
-//$sql="SELECT * FROM Disease WHERE DName='HIV'";
-$sql="SELECT * FROM Disease WHERE DName='".$q."'";
+//$sql="SELECT DID, DName FROM Disease WHERE DName='HIV'";
+$sql="SELECT DID, DName FROM Disease WHERE DName='".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
