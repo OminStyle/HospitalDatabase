@@ -9,7 +9,7 @@ if (!$con) {
 
 $sql="SELECT DName FROM Disease";
 $result = mysqli_query($con,$sql);
-echo '<option value="">Select a treatment:</option>';
+echo '<option value="">Select a Disease Name:</option>';
 while($row = mysqli_fetch_array($result)) {
   echo '<option value="' . $row['DName'] . '">' . $row['DName'] . '</option>';
 }
