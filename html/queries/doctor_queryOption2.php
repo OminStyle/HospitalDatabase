@@ -1,6 +1,8 @@
 <?php
-echo '<form>';
-echo '<select name="Query2" onchange="showData(this.value, this.name)">';
+$q = $_GET['q'];
+echo '<b>Make a selection:</b>';
+echo '<form>
+    <select name="Query2" onchange="showData(this.value, this.name)">';
 
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
