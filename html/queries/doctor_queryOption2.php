@@ -1,6 +1,6 @@
 <?php
 echo '<form>';
-echo '<select name="Take" onchange="showQueryOptions(this.value)">';
+echo '<select name="Disease" onchange="showQueryOptions(this.value)">';
 
 $con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
 if (!$con) {
