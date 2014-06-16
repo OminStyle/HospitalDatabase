@@ -37,8 +37,16 @@
             xmlhttp.open("GET","queries/doctor_queryOption1.php?q="+query,true);
         } else if (query == "Query2") {
             xmlhttp.open("GET","queries/doctor_queryOption2.php?q="+query,true);
+        } else if (query == "Query3") {
+            xmlhttp.open("GET","queries/doctor_queryOption3.php?q="+query,true);
         } else if (query == "Query4") {
             xmlhttp.open("GET","queries/doctor_queryOption4.php?q="+query,true);
+        } else if (query == "Query5") {
+            xmlhttp.open("GET","queries/doctor_query5.php?q="+query,true);
+        } else if (query == "Query6") {
+            xmlhttp.open("GET","queries/doctor_queryOption6.php?q="+query,true);
+        } else if (query == "Query7") {
+            xmlhttp.open("GET","queries/doctor_queryOption7.php?q="+query,true);
         }
         
         xmlhttp.send();
@@ -62,8 +70,18 @@
         }
         if (query === "Query1") {
             xmlhttp.open("GET","queries/doctor_query1.php?q="+str,true);
+        } else if (query === "Query2") {
+            xmlhttp.open("GET","queries/doctor_query2.php?q="+str,true);
+        } else if (query === "Query3") {
+            xmlhttp.open("GET","queries/doctor_query3.php?q="+str,true);
         } else if (query === "Query4") {
             xmlhttp.open("GET","queries/doctor_query4.php?q="+str,true);
+        } else if (query === "Query5") {
+            xmlhttp.open("GET","queries/doctor_query5.php?q="+str,true);
+        } else if (query === "Query6") {
+            xmlhttp.open("GET","queries/doctor_query6.php?q="+str,true);
+        } else if (query === "Query7") {
+            xmlhttp.open("GET","queries/doctor_query7.php?q="+str,true);
         } 
         xmlhttp.send();
     }
