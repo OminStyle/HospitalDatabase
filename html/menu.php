@@ -19,7 +19,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select a User<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href=doctor.php>Doctor</a></li>
-                <li><a href="#">Nurse</a></li>
+                <li><a href=nurse.php>Nurse</a></li>
                 <li><a href=patient.php>Patient</a></li>
               </ul>
             </li>
