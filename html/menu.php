@@ -20,7 +20,7 @@
               <ul class="dropdown-menu">
                 <li><a href=doctor.php>Doctor</a></li>
                 <li><a href="#">Nurse</a></li>
-                <li><a href="#">Patient</a></li>
+                <li><a href=patient.php>Patient</a></li>
               </ul>
             </li>
           </ul>
