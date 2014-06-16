@@ -1,6 +1,7 @@
 <?php
 
 $q = $_GET['q'];
+echo $q;
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
