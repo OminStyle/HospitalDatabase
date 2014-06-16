@@ -165,7 +165,7 @@ function find_most_famous_doctor() {
   $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
 
   $sql = "SELECT  HName
-          FROM    HospitalStaff h, DIagnose d
+          FROM    HospitalStaff h, Diagnose d
           Where   h.HSID = d.HSID 
           Group by  d.HSID
           Having  count(PID) >= ALL (Select Count(PID)
@@ -174,7 +174,7 @@ function find_most_famous_doctor() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo $row['HName'];
+    echo $row['HName'] . "<br>";
   }
 
   /* close connection */
