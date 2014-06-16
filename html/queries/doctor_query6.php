@@ -10,7 +10,7 @@ if (!$con) {
 //$sql="SELECT PID, PName FROM Assigned_Patient WHERE RoomNumber=120";
 $sql="SELECT PID, PName 
     FROM Assigned_Patient 
-    WHERE RoomNumber='$q'";
+    WHERE RoomNumber='".$q."';
 $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
