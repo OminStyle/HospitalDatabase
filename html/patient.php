@@ -61,6 +61,17 @@
       </select>
       <input type="submit">
     </form>
+
+    <form action="patient_output.php" method="post">
+      Find Medicine: <select name="lookup_patient_medicine">
+      <?php list_patient_id_name() ?>
+      </select>
+      <input type="submit">
+    </form>
+    
+    <form action="patient_output.php" method="post">
+      <button type="submit">Find Most Famous Doctor</button>
+    </form>
   </body>
 
 
