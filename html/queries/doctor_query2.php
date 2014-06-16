@@ -1,7 +1,7 @@
 <?php
 $q = $_GET['q'];
 
-$con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
+$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
