@@ -10,7 +10,7 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT TName FROM Take";
+$sql="SELECT TName FROM CureUsing_Treatment";
 $result = mysqli_query($con,$sql);
 echo '<option value="">Select a treatment:</option>';
 while($row = mysqli_fetch_array($result)) {
