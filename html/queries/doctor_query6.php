@@ -1,4 +1,5 @@
 <?php
+
 $q = $_GET['q'];
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
@@ -6,11 +7,7 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-//mysqli_select_db($con,"hospital");
-//$sql="SELECT PID, PName FROM Assigned_Patient WHERE RoomNumber=120";
-$sql="SELECT PID, PName 
-    FROM Assigned_Patient 
-    WHERE RoomNumber='".$q."';
+$sql="SELECT PID, PName FROM Assigned_Patient WHERE RoomNumber='".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
