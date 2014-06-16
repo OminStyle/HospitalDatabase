@@ -2,7 +2,7 @@
 $q = $_GET['q'];
 echo '<b>Make a selection:</b>';
 echo '<form>
-    <select name="Query2" onchange="showQueryOptions(this.name)">';
+    <select name="Query2" onchange="showData(this.value, this.name)">';
 
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
@@ -22,6 +22,6 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='txtHint1'><b>Disease Index and Disease will be listed here.</b></div>"
+      <div id='queryData'><b>Disease Index and Disease will be listed here.</b></div>"
 ?>
 
