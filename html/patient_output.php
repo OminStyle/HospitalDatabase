@@ -47,6 +47,12 @@
     else if($_POST["find_doctor"]) {
       find_patient_doctor();
     }
+    else if($_POST["lookup_patient_medicine"] != NULL) {
+      lookup_patient_medicine();
+    }
+    else {
+      find_most_famous_doctor();
+    }
     ?>
 
   </body>
