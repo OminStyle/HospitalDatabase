@@ -1,9 +1,8 @@
 <?php
-// medicines/drugs are associated with specific treatment
 $q = $_GET['q'];
-echo '<b>Make a selection:</b>
-<form>
-<select name="Query6" onchange="showData(this.value, this.name)">';
+echo '<b>Make a selection:</b>';
+echo '<form>
+  <select name="Query6" onchange="showData(this.value, this.name)">';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
@@ -22,5 +21,5 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='queryData'><b>Patients in selected Room will be listed here.</b></div>"
+      <div id='txtHint1'><b>Patients in selected Room will be listed here.</b></div>"
 ?>
