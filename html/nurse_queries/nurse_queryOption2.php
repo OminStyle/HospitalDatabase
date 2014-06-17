@@ -6,7 +6,7 @@
 	Attending Physician: <input type="text" name="pname"><br>
 	Age: <input type="text" name="age"><br>
 	Weight: <input type="text" name="weight"><br>
-	Height: <input type="text" name="Height"><br>
+	Height: <input type="text" name="height"><br>
 	Queue Number: <input type="text" name="queueNumber"><br>
 	<input type='submit'>
 </form>
