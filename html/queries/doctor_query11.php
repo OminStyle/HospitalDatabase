@@ -12,6 +12,6 @@
 
 <meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
 <script type="text/javascript">
-    window.location.href = "/HospitalDatabase/html/doctor.php"
+    // window.location.href = "/HospitalDatabase/html/doctor.php"
 </script>
 ?>
