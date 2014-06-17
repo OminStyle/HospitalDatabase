@@ -3,18 +3,18 @@
 $q = $_GET['q'];
 echo '<b>Make a selection:</b>
 <form>
-<select name="Query2" onchange="showData(this.value, this.name)">';
+<select name="Query8" onchange="showData(this.value, this.name)">';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT DName FROM Disease";
+$sql="SELECT department FROM Doctor";
 $result = mysqli_query($con,$sql);
-echo '<option value="">Select a Disease:</option>';
+echo '<option value="">Select a department:</option>';
 while($row = mysqli_fetch_array($result)) {
-  echo '<option value="' . $row['DName'] . '">' . $row['DName'] . '</option>';
+  echo '<option value="' . $row['department'] . '">' . $row['department'] . '</option>';
 }
 
 mysqli_close($con);
@@ -22,5 +22,5 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='queryData'><b>Disease info will be listed here.</b></div>"
+      <div id='queryData'><b>Treatment and medicine info will be listed here.</b></div>"
 ?>
