@@ -53,6 +53,12 @@
             xmlhttp.open("GET","queries/doctor_queryOption8.php?q="+query,true);
         } else if (query == "Query9") {
             xmlhttp.open("GET","queries/doctor_query9.php?q="+query,true);
+        } else if (query == "Query10") {
+            xmlhttp.open("GET","queries/doctor_query10.php?q="+query,true);
+        } else if (query == "Query11") {
+            xmlhttp.open("GET","queries/doctor_queryOption11.php?q="+query,true);
+        } else if (query == "Query12") {
+            xmlhttp.open("GET","queries/doctor_query12.php?q="+query,true);
         }
 
         
@@ -93,6 +99,12 @@
             xmlhttp.open("GET","queries/doctor_query8.php?q="+str,true);
         } else if (query === "Query9") {
             xmlhttp.open("GET","queries/doctor_query9.php?q="+str,true);
+        } else if (query === "Query10") {
+            xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
+        } else if (query === "Query11") {
+            xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
+        } else if (query === "Query12") {
+            xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
         } 
         xmlhttp.send();
     }
@@ -111,15 +123,18 @@
             <select name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
                 <option value="Query0">Query0</option>
-                <option value="Query1">Query1</option>
-                <option value="Query2">Query2</option>
-                <option value="Query3">Query3</option>
-                <option value="Query4">Query4</option>
-                <option value="Query5">Query5</option>
-                <option value="Query6">Query6</option>
-                <option value="Query7">Query7</option>
-                <option value="Query8">Query8</option>
-                <option value="Query9">Query9</option>
+                <option value="Query1">Medicines for selected Treatment</option>
+                <option value="Query2">Find Disease Index / Disease Name</option>
+                <option value="Query3">Find Room Number of selected Patient</option>
+                <option value="Query4">All patients with selected Disease</option>
+                <option value="Query5">Disease have by all patients above age 70</option>
+                <option value="Query6">Patients in selected Room</option>
+                <option value="Query7">Patients not being treated by selected department</option>
+                <option value="Query8">Number of Patients treated by each department</option>
+                <option value="Query9">Longest Patient Stay for each disease</option>
+                <option value="Query10">Find oldest Patient diagnosed by experienced doctor</option>
+                <option value="Query11">Query11</option>
+                <option value="Query12">Find youngest Patient diagnosed by experienced doctor</option>
             </select>
         </form>
       <br>
