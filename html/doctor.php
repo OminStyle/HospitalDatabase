@@ -95,6 +95,8 @@
             xmlhttp.open("GET","queries/doctor_query8.php?q="+str,true);
         } else if (query === "Query9") {
             xmlhttp.open("GET","queries/doctor_query9.php?q="+str,true);
+        } else if (query === "Query10") {
+            xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
         } 
         xmlhttp.send();
     }
@@ -122,6 +124,7 @@
                 <option value="Query7">Query7</option>
                 <option value="Query8">Query8</option>
                 <option value="Query9">Query9</option>
+                <option value="Query9">Query10</option>
             </select>
         </form>
       <br>
