@@ -57,7 +57,7 @@
             xmlhttp.open("GET","queries/doctor_query10.php?q="+query,true);
         } else if (query == "Query11") {
             xmlhttp.open("GET","queries/doctor_queryOption11.php?q="+query,true);
-        } else if (query == "Query10") {
+        } else if (query == "Query12") {
             xmlhttp.open("GET","queries/doctor_query12.php?q="+query,true);
         }
 
