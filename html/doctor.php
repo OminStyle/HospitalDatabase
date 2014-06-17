@@ -125,7 +125,7 @@
                 <option value="Query0">Query0</option>
                 <option value="Query1">Medicines for selected Treatment</option>
                 <option value="Query2">Find Disease Index / Disease Name</option>
-                <option value="Query3">Query3</option>
+                <option value="Query3">Find Room Number of selected Patient</option>
                 <option value="Query4">All patients with selected Disease</option>
                 <option value="Query5">Disease have by all patients above age 70</option>
                 <option value="Query6">Patients in selected Room</option>
