@@ -122,19 +122,19 @@
         <form>
             <select name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
-                <option value="Query0">Query0</option>
-                <option value="Query1">Medicines for selected Treatment</option>
-                <option value="Query2">Find Disease Index / Disease Name</option>
-                <option value="Query3">Find Room Number of selected Patient</option>
-                <option value="Query4">All patients with selected Disease</option>
-                <option value="Query5">Disease have by all patients above age 70</option>
-                <option value="Query6">Patients in selected Room</option>
-                <option value="Query7">Patients not being treated by selected department</option>
-                <option value="Query8">Number of Patients treated by each department</option>
-                <option value="Query9">Longest Patient Stay for each disease</option>
-                <option value="Query10">Find oldest Patient diagnosed by experienced doctor</option>
-                <option value="Query11">Query11</option>
-                <option value="Query12">Find youngest Patient diagnosed by experienced doctor</option>
+                <option value="Query0"></option>
+                <option value="Query1">1. Medicines for selected Treatment</option>
+                <option value="Query2">2. Find Disease Index / Disease Name</option>
+                <option value="Query3">3. Find Room Number of selected Patient</option>
+                <option value="Query4">4. All patients with selected Disease</option>
+                <option value="Query5">5. Disease have by all patients above age 70</option>
+                <option value="Query6">6. Patients in selected Room</option>
+                <option value="Query7">7. Patients not being treated by selected department</option>
+                <option value="Query8">8. Number of Patients treated by each department</option>
+                <option value="Query9">9. Longest Patient Stay for each disease</option>
+                <option value="Query10">10. Find oldest Patient diagnosed by experienced doctor</option>
+                <option value="Query11">11. Remove Disease</option>
+                <option value="Query12">12. Find youngest Patient diagnosed by experienced doctor</option>
             </select>
         </form>
       <br>
