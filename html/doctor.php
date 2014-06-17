@@ -115,6 +115,8 @@
                 <option value="Query5">Query5</option>
                 <option value="Query6">Query6</option>
                 <option value="Query7">Query7</option>
+                <option value="Query8">Query6</option>
+                <option value="Query9">Query7</option>
             </select>
         </form>
       <br>
