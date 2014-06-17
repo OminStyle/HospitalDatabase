@@ -1,6 +1,6 @@
 <?php
 $q = $_GET['q'];
-echo $q;
+
 
 echo '<b>Make a selection:</b>';
 echo '<form>
