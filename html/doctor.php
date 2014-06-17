@@ -47,7 +47,12 @@
             xmlhttp.open("GET","queries/doctor_queryOption6.php?q="+query,true);
         } else if (query == "Query7") {
             xmlhttp.open("GET","queries/doctor_queryOption7.php?q="+query,true);
+        } else if (query == "Query8") {
+            xmlhttp.open("GET","queries/doctor_queryOption8.php?q="+query,true);
+        } else if (query == "Query9") {
+            xmlhttp.open("GET","queries/doctor_queryOption9.php?q="+query,true);
         }
+
         
         xmlhttp.send();
     }
@@ -82,6 +87,10 @@
             xmlhttp.open("GET","queries/doctor_query6.php?q="+str,true);
         } else if (query === "Query7") {
             xmlhttp.open("GET","queries/doctor_query7.php?q="+str,true);
+        } else if (query === "Query8") {
+            xmlhttp.open("GET","queries/doctor_query8.php?q="+str,true);
+        } else if (query === "Query9") {
+            xmlhttp.open("GET","queries/doctor_query9.php?q="+str,true);
         } 
         xmlhttp.send();
     }
