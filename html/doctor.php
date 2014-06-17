@@ -122,7 +122,6 @@
         <form>
             <select name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
-                <option value="Query0"></option>
                 <option value="Query1">1. Medicines for selected Treatment</option>
                 <option value="Query2">2. Find Disease Index / Disease Name</option>
                 <option value="Query3">3. Find Room Number of selected Patient</option>
