@@ -23,5 +23,5 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='txtHint1'><b>Patients in selected Room will be listed here.</b></div>"
+      <div id='queryData'><b>Patients in selected Room will be listed here.</b></div>"
 ?>
