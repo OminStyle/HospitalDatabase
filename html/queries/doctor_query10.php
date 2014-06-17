@@ -1,9 +1,9 @@
 <?php
-	$pid =  $_POST["pid"];
+	$dname = $_POST["dname"];
 
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-	$sql = "Delete from Assigned_Patient where PID=" . $pid;
+	$sql = 'DELETE FROM Disease WHERE DName=\"' . $dname . '\"';
 	
 	$result = mysqli_query($con,$sql);
 	mysqli_close($con);
