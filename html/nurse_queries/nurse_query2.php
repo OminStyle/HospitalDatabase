@@ -1,28 +1,27 @@
 <?php
-// medicines/drugs are associated with specific treatment
-$q = $_GET['q'];
+	$pid =  $_POST["pid"];
+	$roomNumber = $_POST["roomNumber"];
+	$address = $_POST["address"];
+	$ccn = $_POST["ccn"];
+	$pname = $_POST['pname'];
+	$age = $_POST['age'];
+	$weight = $_POST['weight'];
+	$height = $_POST['height'];
+	$queueNumber = $_POST['queueNumber'];
 
-$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
-if (!$con) {
-  die('Could not connect: ' . mysqli_error($con));
-}
+	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-$sql="SELECT * FROM Take WHERE TName='".$q."'";
-$result = mysqli_query($con,$sql);
+	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
+	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. "," .$queueNumber.  ")";
+	echo $sql;
+	
+	$result = mysqli_query($con,$sql);
+	mysqli_close($con);
 
-echo "<table border='1'>
-<tr>
-  <th>TName</th>
-  <th>MName</th>
-</tr>";
-
-while($row = mysqli_fetch_array($result)) {
-  echo "<tr>";
-  echo "<td>" . $row['TName'] . "</td>";
-  echo "<td>" . $row['MName'] . "</td>";
-  echo "</tr>";
-}
-echo "</table>";
-
-mysqli_close($con);
 ?>
+
+<meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
+<script type="text/javascript">
+	alert('You have entered a new patient.')
+    window.location.href = "/HospitalDatabase/html/nurse.php"
+</script>
