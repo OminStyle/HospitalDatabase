@@ -7,7 +7,7 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT a.PID, a.PName FROM Assigned_Patient a, Diagnose d, Disease di
+$sql="SELECT DISTINCT a.PID, a.PName FROM Assigned_Patient a, Diagnose d, Disease di
         WHERE d.PID=a.PID AND d.DID = di.DID AND d.DID ='".$q."'";
 $result = mysqli_query($con,$sql);
 
