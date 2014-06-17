@@ -32,8 +32,9 @@
             if (xmlhttp.readyState==4 && xmlhttp.status==200) {
                 document.getElementById("queryOptions").innerHTML=xmlhttp.responseText;
             } 
-        }
-        if (query == "Query1") {
+        }if (query == "Query0") {
+            xmlhttp.open("GET","queries/doctor_queryOption0.php?q="+query,true);
+        } else if (query == "Query1") {
             xmlhttp.open("GET","queries/doctor_queryOption1.php?q="+query,true);
         } else if (query == "Query2") {
             xmlhttp.open("GET","queries/doctor_queryOption2.php?q="+query,true);
