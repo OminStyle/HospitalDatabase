@@ -99,7 +99,7 @@
         <form>
             <select name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
-                <option value="Query1">Query1</option>
+                <option value="Query1">Find all patients from this room:</option>
                 <option value="Query2">Query2</option>
                 <option value="Query3">Query3</option>
                 <option value="Query4">Query4</option>
