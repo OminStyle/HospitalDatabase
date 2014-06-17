@@ -100,8 +100,8 @@
             <select name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
                 <option value="Query1">Find all patients from this room:</option>
-                <option value="Query2">Insert New Patient</option>
-                <option value="Query3">Query3</option>
+                <option value="Query2">INSERT PATIENT</option>
+                <option value="Query3">DELETE PATIENT</option>
                 <option value="Query4">Query4</option>
                 <option value="Query5">Query5</option>
             </select>
