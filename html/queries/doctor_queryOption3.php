@@ -1,22 +1,26 @@
 <?php
-echo '<form>';
-echo '<select name="Take" onchange="showUser(this.value)">';
+// medicines/drugs are associated with specific treatment
+$q = $_GET['q'];
+echo '<b>Make a selection:</b>
+<form>
+<select name="Query3" onchange="showData(this.value, this.name)">';
 
-$con = mysqli_connect('localhost','root','eece304Rocks!','hospital');
+$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT h.HSID, h.HName FROM HospitalStaff h, Attend a WHERE a.PID=2 AND 
-		a.time='2013-06-01 22:10:45' AND a.HSID=h.HSID";
+$sql="SELECT PID from Assigned_Patient ";
 $result = mysqli_query($con,$sql);
-echo '<option value="">Select a time</option>';
+echo '<option value="">Select a patient ID:</option>';
 while($row = mysqli_fetch_array($result)) {
-  echo '<option value="' . $row['HSID'] . '">' . $row['StaffName'] . '</option>';
+  echo '<option value="' . $row['PID'] . '">' . $row['PID'] . '</option>';
 }
 
 mysqli_close($con);
 
-echo '</select>';
-echo '</form>';
+echo "</select>
+</form>
+<br>
+      <div id='queryData'><b>Treatment and medicine info will be listed here.</b></div>"
 ?>
