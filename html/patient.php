@@ -86,7 +86,7 @@
  * @return MySQL object
  */
 function list_patient_id() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";
@@ -110,7 +110,7 @@ function list_patient_id() {
  * @return MySQL object
  */
 function list_patient_name() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PName";
@@ -134,7 +134,7 @@ function list_patient_name() {
  * @return MySQL object
  */
 function list_patient_id_name() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $table = "Assigned_Patient";
   $column_1 = "PID";
