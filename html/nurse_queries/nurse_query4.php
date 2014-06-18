@@ -5,11 +5,8 @@ $pid = $_POST['pid'];
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-if($column == 'PName') {
-	$sql="UPDATE Assigned_Patient SET \"PName\"". "=" . $value . " WHERE PID=" . $pid;
-}
-else if($column == 'Address') {
-	$sql="UPDATE Assigned_Patient SET \"Address\"". "=" . $value . " WHERE PID=" . $pid;
+if($column == 'PName' || $column == 'Address') {
+	$sql="UPDATE Assigned_Patient SET " . $column . "=\"" . $value . "\" WHERE PID=" . $pid;
 }
 else {
 	$sql="UPDATE Assigned_Patient SET " . $column . "=" . $value . " WHERE PID=" . $pid;
