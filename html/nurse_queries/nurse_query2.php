@@ -15,7 +15,7 @@
 	$mysqli->query("INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")");
 	echo $sql;
 	
-	$result = mysqli_query($con,$sql);
+	// $result = mysqli_query($con,$sql);
 
 	echo $mysqli->error;
 	echo 'dude';
