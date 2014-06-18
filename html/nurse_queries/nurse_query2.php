@@ -17,10 +17,10 @@
 	
 	$result = mysqli_query($con,$sql);
 
-	echo 'dude';
-	echo mysqli_error($con);
-	echo mysqli_errno($con);
-	// echo $result;
+	if(mysqli_error() != NULL) {
+		echo '<script type="text/javascript">alert("' .echo mysqli_error($con);. '"); </script>';
+	}
+	
 	mysqli_close($con);
 
 ?>
