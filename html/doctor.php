@@ -131,9 +131,9 @@
                 <option value="Query7">7. Patients not being treated by selected department</option>
                 <option value="Query8">8. Number of Patients treated by each department</option>
                 <option value="Query9">9. Longest Patient Stay for each disease</option>
-                <option value="Query10">10. Find oldest Patient diagnosed by experienced doctor</option>
                 <option value="Query11">11. Remove Disease</option>
-                <option value="Query12">12. Find youngest Patient diagnosed by experienced doctor</option>
+                <option value="Query10">10. For each disease, find the age of oldest Patient diagnosed by experienced doctor</option>
+                <option value="Query12">12. For each disease, find the age of youngest Patient diagnosed by experienced doctor</option>
             </select>
         </form>
       <br>
