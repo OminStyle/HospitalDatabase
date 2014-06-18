@@ -62,6 +62,8 @@
             xmlhttp.open("GET","queries/doctor_queryOption11.php?q="+query,true);
         } else if (query == "Query12") {
             xmlhttp.open("GET","queries/doctor_query12.php?q="+query,true);
+        } else if (query == "Query13") {
+            xmlhttp.open("GET","queries/doctor_query13.php?q="+query,true);
         }
 
         
@@ -108,7 +110,9 @@
             xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
         } else if (query === "Query12") {
             xmlhttp.open("GET","queries/doctor_query10.php?q="+str,true);
-        } 
+        }  else if(query === "Query13") {
+            xmlhttp.open("GET","queries/doctor_query13.php?q="+str,true);
+        }
         xmlhttp.send();
     }
 </script>
@@ -135,9 +139,10 @@
                 <option value="Query7">7. Patients not being treated by selected department</option>
                 <option value="Query8">8. Number of Patients treated by each department</option>
                 <option value="Query9">9. Longest Patient Stay for each disease</option>
-                <option value="Query11">11. Remove Disease</option>
                 <option value="Query10">10. For each disease, find the age of oldest Patient diagnosed by experienced doctor</option>
+                <option value="Query11">11. Remove Disease</option>
                 <option value="Query12">12. For each disease, find the age of youngest Patient diagnosed by experienced doctor</option>
+                <option value="Query13">13. Insert a Diagnosis for a patient</option>
             </select>
         </form>
       <br>
