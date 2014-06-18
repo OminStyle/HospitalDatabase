@@ -11,6 +11,5 @@
 
 <meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
 <script type="text/javascript">
-	alert('You have deleted a patient.')
     window.location.href = "/HospitalDatabase/html/nurse.php"
 </script>
