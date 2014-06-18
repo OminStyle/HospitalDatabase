@@ -6,6 +6,9 @@
 	$sql = "Delete from Assigned_Patient where PID=" . $pid;
 	
 	$result = mysqli_query($con,$sql);
+
+	echo mysql_error();
+	echo mysql_errno();
 	mysqli_close($con);
 ?>
 
