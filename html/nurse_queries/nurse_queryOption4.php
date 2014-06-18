@@ -12,5 +12,5 @@
 
 	New Value: <br><input type="text" name="value" style="width: 100%"><br>
 	Enter Patient(PID) : <br><input type="text" name="pid" style="width: 100%"><br>
-	<input type='submit'>
+	<input class="form-control" type='submit'>
 </form>

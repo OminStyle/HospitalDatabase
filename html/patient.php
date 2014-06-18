@@ -34,42 +34,42 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <form action="patient_output.php" method="post">
-      Find Patient name: <select name="patient_select_name">
+      1. Find Patient name: <br><select name="patient_select_name" style="width: 100%" class="form-control">
       <?php list_patient_id() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find Patient ID: <select name="patient_select_id">
+      2. Find Patient ID: <br><select name="patient_select_id" style="width: 100%" class="form-control">
       <?php list_patient_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find patient's disease and treatment: <select name="patient_select_id_name">
+      3. Find patient's disease and treatment: <br><select name="patient_select_id_name" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find doctor: <select name="find_doctor">
+      4. Find doctor: <br><select name="find_doctor" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find Medicine: <select name="lookup_patient_medicine">
+      5. <br>Find Medicine: <select name="lookup_patient_medicine" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
     
     <form action="patient_output.php" method="post">
-      <button type="submit">Find Most Famous Doctor</button>
+      6. Find the most famous doctor: <br><button type="submit">Submit</button>
     </form><br>
   </body>
 
