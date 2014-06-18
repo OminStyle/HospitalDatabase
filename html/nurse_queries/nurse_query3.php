@@ -12,7 +12,7 @@
 	mysqli_close($con);
 ?>
 
-<meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
+<!-- <meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
 <script type="text/javascript">
     window.location.href = "/HospitalDatabase/html/nurse.php"
-</script>
+</script> -->
