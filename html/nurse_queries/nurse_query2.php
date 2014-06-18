@@ -9,7 +9,7 @@
 	$height = $_POST['height'];
 	$queueNumber = $_POST['queueNumber'];
 
-	$con = mysql_connect('localhost','eece304','eece304Rocks!','hospital');
+	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
 	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
 	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")";
@@ -18,9 +18,9 @@
 	$result = mysqli_query($con,$sql);
 
 	echo 'dude';
-	echo mysql_error($con);
-	echo mysql_errno($con);
-	echo $result;
+	echo mysqli_error($con);
+	echo mysqli_errno($con);
+	// echo $result;
 	mysqli_close($con);
 
 ?>
