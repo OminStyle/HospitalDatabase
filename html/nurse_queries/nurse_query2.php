@@ -17,8 +17,9 @@
 	
 	$result = mysqli_query($con,$sql);
 
-	echo mysql_error();
-	echo mysql_errno();
+	echo 'dude';
+	echo mysql_error($con);
+	echo mysql_errno($con);
 	echo $result;
 	mysqli_close($con);
 
