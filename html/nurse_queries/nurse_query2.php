@@ -17,8 +17,8 @@
 	$result = mysqli_query($con,$sql);
 
 	if(mysqli_error($con) != NULL) {
-		echo mysqli_error($con);
-		echo mysqli_errno($con);
+		echo mysqli_error($con) . "<br>";
+		echo "Error Number: " . mysqli_errno($con);
 	}
 	else {
 		mysqli_close($con);
