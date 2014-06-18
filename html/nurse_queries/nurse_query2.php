@@ -16,7 +16,9 @@
 	
 	$result = mysqli_query($con,$sql);
 
-	echo "<script type=\"text/javascript\">alert(\"" .mysqli_error($con). "\");</script>";
+	if(mysqli_error($con) != NULL) {
+		echo mysqli_error($con);
+	}
 	mysqli_close($con);
 
 ?>
