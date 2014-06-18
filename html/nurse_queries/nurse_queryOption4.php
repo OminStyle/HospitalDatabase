@@ -1,6 +1,5 @@
 <form action="nurse_queries/nurse_query4.php" method="post">
 	<select name="patient_update_info">
-        <option value="PID">1. PID</option>
         <option value="RoomNumber">1. Room Number</option>
         <option value="Address">2. Address </option>
         <option value="CCN">3. Card Card Number </option>

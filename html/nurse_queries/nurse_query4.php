@@ -1,5 +1,3 @@
-Output Page
-
 <?php
 
 $column = $_POST['patient_update_info'];
@@ -8,12 +6,12 @@ $pid = $_POST['pid'];
 echo $column " " . $value . " " . $pid;
 echo 'values received';
 
-$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
+// $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-$sql="UPDATE Assigned_Patient SET " . $column . "=" . $value . "WHERE PID=" . $pid;
-echo $sql;
+// $sql="UPDATE Assigned_Patient SET " . $column . "=" . $value . "WHERE PID=" . $pid;
+// echo $sql;
 
-$result = mysqli_query($con,$sql);
+// $result = mysqli_query($con,$sql);
 
-mysqli_close($con);
+// mysqli_close($con);
 ?>
