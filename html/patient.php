@@ -62,7 +62,7 @@
     </form><br>
 
     <form action="patient_output.php" method="post">
-      5. <br>Find Medicine: <select name="lookup_patient_medicine" style="width: 100%" class="form-control">
+      5. Find Medicine: <br><select name="lookup_patient_medicine" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
@@ -94,7 +94,7 @@ function list_patient_id() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . "</option>";
   }
 
   /* close connection */
@@ -118,7 +118,7 @@ function list_patient_name() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">Patient Name - " . $row[$column_1] . "</option>";
   }
 
   /* close connection */
@@ -142,7 +142,7 @@ function list_patient_id_name() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . " ". $row['PName'] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . " ". $row['PName'] . "</option>";
   }
 
   /* close connection */

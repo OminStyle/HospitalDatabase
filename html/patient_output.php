@@ -65,9 +65,18 @@ function find_patient_name() {
   $sql = "SELECT * FROM Assigned_Patient WHERE PID='".$pid."'";
   $result = mysqli_query($mysqli, $sql);
 
+  echo "<table border='1'>
+  <tr>
+    <th>PName</th>
+  </tr>";
+
   while($row = mysqli_fetch_array($result)) {
-    echo $row['PName'];
+    echo "<tr>";
+    echo "<td>" . $row['PName'] . "</td>";
+    echo "</tr>";
   }
+  
+  echo "</table>";
 
   /* close connection */
   $mysqli->close();
