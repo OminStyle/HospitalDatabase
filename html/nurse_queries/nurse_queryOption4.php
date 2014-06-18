@@ -1,26 +1,16 @@
-<?php
-// medicines/drugs are associated with specific treatment
-$q = $_GET['q'];
-echo '<b>Make a selection:</b>
-<form>
-<select name="Query1" onchange="showData(this.value, this.name)">';
+<form action="nurse_queries/nurse_query4.php" method="post">
+	<select name="patient_update_info">
+        <option value="PID">1. PID</option>
+        <option value="RoomNumber">1. Room Number</option>
+        <option value="Address">2. Address </option>
+        <option value="CCN">3. Card Card Number </option>
+        <option value="PName">4. Patient Name</option>
+        <option value="Age">5. Age</option>
+        <option value="Weight">6. Weight</option>
+        <option value="Height">7. Height</option>
+    </select>
 
-$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
-if (!$con) {
-  die('Could not connect: ' . mysqli_error($con));
-}
-
-$sql="SELECT TName FROM CureUsing_Treatment";
-$result = mysqli_query($con,$sql);
-echo '<option value="">Select a treatment:</option>';
-while($row = mysqli_fetch_array($result)) {
-  echo '<option value="' . $row['TName'] . '">' . $row['TName'] . '</option>';
-}
-
-mysqli_close($con);
-
-echo "</select>
+	Value: <input type="text" name="value"><br>
+	PID : <input type="text" name="pid"><br>
+	<input type='submit'>
 </form>
-<br>
-      <div id='queryData'><b>Treatment and medicine info will be listed here.</b></div>"
-?>
