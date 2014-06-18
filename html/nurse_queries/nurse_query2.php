@@ -12,12 +12,12 @@
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
 	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
-	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")";
+	$mysqli->query("INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")");
 	echo $sql;
 	
 	$result = mysqli_query($con,$sql);
 
-	echo $result->error;
+	echo $mysqli->error;
 	echo 'dude';
 	echo mysql_error($con);
 	echo mysql_errno($con);
