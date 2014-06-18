@@ -24,5 +24,11 @@ while($row = mysqli_fetch_array($result)) {
 }
 echo "</table>";
 
+if(mysqli_error($con) != NULL) {
+	echo $sql . "<br>";
+	echo mysqli_error($con) . "<br>";
+	echo "Error Number: " . mysqli_errno($con);
+}
+
 mysqli_close($con);
 ?>

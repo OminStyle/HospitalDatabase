@@ -34,42 +34,42 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <form action="patient_output.php" method="post">
-      Find Patient name: <select name="patient_select_name">
+      1. Find Patient name: <br><select name="patient_select_name" style="width: 100%" class="form-control">
       <?php list_patient_id() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find Patient ID: <select name="patient_select_id">
+      2. Find Patient ID: <br><select name="patient_select_id" style="width: 100%" class="form-control">
       <?php list_patient_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find patient's disease and treatment: <select name="patient_select_id_name">
+      3. Find patient's disease and treatment: <br><select name="patient_select_id_name" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find doctor: <select name="find_doctor">
+      4. Find doctor: <br><select name="find_doctor" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
 
     <form action="patient_output.php" method="post">
-      Find Medicine: <select name="lookup_patient_medicine">
+      5. Find Medicine: <br><select name="lookup_patient_medicine" style="width: 100%" class="form-control">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
     </form><br>
     
     <form action="patient_output.php" method="post">
-      <button type="submit">Find Most Famous Doctor</button>
+      6. Find the most famous doctor: <br><button type="submit">Submit</button>
     </form><br>
   </body>
 
@@ -94,7 +94,7 @@ function list_patient_id() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . "</option>";
   }
 
   /* close connection */
@@ -118,7 +118,7 @@ function list_patient_name() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">Patient Name - " . $row[$column_1] . "</option>";
   }
 
   /* close connection */
@@ -142,7 +142,7 @@ function list_patient_id_name() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">" . $row[$column_1] . " ". $row['PName'] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . ", Patient Name - ". $row['PName'] . "</option>";
   }
 
   /* close connection */

@@ -11,20 +11,18 @@
 
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
 	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")";
-	echo $sql;
-	
+		
 	$result = mysqli_query($con,$sql);
 
-	echo mysql_error();
-	echo mysql_errno();
-	echo $result;
+	if(mysqli_error($con) != NULL) {
+		echo $sql . "<br>";
+		echo mysqli_error($con) . "<br>";
+		echo "Error Number: " . mysqli_errno($con);
+	}
+	else {
+		mysqli_close($con);
+		echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/nurse.php\"><script type=\"text/javascript\">window.location.href = \"/HospitalDatabase/html/nurse.php\"</script>";
+	}
 	mysqli_close($con);
-
 ?>
-
-<!-- <meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
-<script type="text/javascript">
-    window.location.href = "/HospitalDatabase/html/nurse.php"
-</script> -->
