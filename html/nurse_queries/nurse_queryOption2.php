@@ -1,4 +1,5 @@
-<form class="form-inline" action="nurse_queries/nurse_query2.php" method="post">
+
+<form name="patientInfo" class="form-inline" action="nurse_queries/nurse_query2.php" onsubmit="return validateForm()" method="post">
 	PID: <input class="form-control" type="text" name="pid"><br>
 	Room Number: <input class="form-control" type="text" name="roomNumber"><br>
 	Address: <input class="form-control" type="text" name="address"><br>

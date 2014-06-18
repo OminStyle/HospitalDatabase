@@ -88,6 +88,14 @@
         } 
         xmlhttp.send();
     }
+
+function validateForm() {
+    var key = document.forms["patientInfo"]["pid"].value;
+    if (key==null || key=="") {
+        alert("PID must be filled out");
+        return false;
+    }
+}
 </script>
 
 </head>
