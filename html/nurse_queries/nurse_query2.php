@@ -12,7 +12,7 @@
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
 	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")";
-	echo $sql;
+	echo $sql . "<br>";
 	
 	$result = mysqli_query($con,$sql);
 
@@ -20,13 +20,11 @@
 		echo mysqli_error($con);
 	}
 	else {
-		echo "Good Query";
+		mysqli_close($con);
+		echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/nurse.php\">
+			  <script type=\"text/javascript\">
+    		  window.location.href = \"/HospitalDatabase/html/nurse.php\"
+			  </script>"
 	}
 	mysqli_close($con);
-
 ?>
-
-<!-- <meta http-equiv="refresh" content="1;/HospitalDatabase/html/nurse.php">
-<script type="text/javascript">
-    window.location.href = "/HospitalDatabase/html/nurse.php"
-</script> -->
