@@ -13,7 +13,7 @@
 
 	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
 	$mysqli->query("INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")");
-	echo $sql;
+	// echo $sql;
 	
 	// $result = mysqli_query($con,$sql);
 
