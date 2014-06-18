@@ -8,7 +8,7 @@
         <option value="Age">5. Age</option>
         <option value="Weight">6. Weight</option>
         <option value="Height">7. Height</option>
-    </select>
+    </select><br>
 
 	Value: <input type="text" name="value"><br>
 	PID : <input type="text" name="pid"><br>
