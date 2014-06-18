@@ -21,10 +21,7 @@
 	}
 	else {
 		mysqli_close($con);
-		echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/nurse.php\">
-			  <script type=\"text/javascript\">
-    		  window.location.href = \"/HospitalDatabase/html/nurse.php\"
-			  </script>"
+		echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/nurse.php\"><script type=\"text/javascript\">window.location.href = \"/HospitalDatabase/html/nurse.php\"</script>";
 	}
 	mysqli_close($con);
 ?>
