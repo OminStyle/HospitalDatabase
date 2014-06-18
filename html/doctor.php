@@ -63,7 +63,7 @@
         } else if (query == "Query12") {
             xmlhttp.open("GET","queries/doctor_query12.php?q="+query,true);
         } else if (query == "Query13") {
-            xmlhttp.open("GET","queries/doctor_query13.php?q="+query,true);
+            xmlhttp.open("GET","queries/doctor_queryOption13.php?q="+query,true);
         }
 
         
