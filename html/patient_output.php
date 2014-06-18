@@ -7,7 +7,7 @@
     <title>Hospital</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,11 +23,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Hospital Database</h1>
-        <p>For EECE 304</p>
-      </div>
-
-    </div> <!-- /container -->
+      
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -62,7 +58,7 @@
 
 <?php
 function find_patient_name() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $pid = $_POST["patient_select_name"];
 
@@ -78,7 +74,7 @@ function find_patient_name() {
 }
 
 function find_patient_id() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $name = $_POST["patient_select_id"];
 
@@ -103,7 +99,7 @@ function find_patient_id() {
  * These functions require variables passed in from html variables using the $_POST[(variable name)];
  */
 function patient_treatment() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $pid = $_POST["patient_select_id_name"];
 
@@ -125,7 +121,7 @@ function patient_treatment() {
 }
 
 function find_patient_doctor() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $pid = $_POST["find_doctor"];
 
@@ -144,7 +140,7 @@ function find_patient_doctor() {
 }
 
 function lookup_patient_medicine() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
   $pid = $_POST["lookup_patient_medicine"];
 
   $sql = "SELECT  m.MName, m.Dosage
@@ -162,7 +158,7 @@ function lookup_patient_medicine() {
 }
 
 function find_most_famous_doctor() {
-  $mysqli = mysqli_connect("localhost", "root", "eece304Rocks!", "hospital");
+  $mysqli = mysqli_connect("localhost", "eece304", "eece304Rocks!", "hospital");
 
   $sql = "SELECT  HName
           FROM    HospitalStaff h, Diagnose d
@@ -181,3 +177,6 @@ function find_most_famous_doctor() {
   $mysqli->close();
 }
 ?>
+</div>
+
+    </div> <!-- /container -->
