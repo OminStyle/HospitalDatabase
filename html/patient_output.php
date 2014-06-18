@@ -75,7 +75,7 @@ function find_patient_name() {
     echo "<td>" . $row['PName'] . "</td>";
     echo "</tr>";
   }
-  
+
   echo "</table>";
 
   /* close connection */
@@ -90,9 +90,18 @@ function find_patient_id() {
   $sql = "SELECT * FROM Assigned_Patient WHERE PName='".$name."'";
   $result = mysqli_query($mysqli, $sql);
 
+  echo "<table border='1'>
+  <tr>
+    <th>PID</th>
+  </tr>";
+
   while($row = mysqli_fetch_array($result)) {
-    echo $row['PID'];
+    echo "<tr>";
+    echo "<td>" . $row['PID'] . "</td>";
+    echo "</tr>";
   }
+
+  echo "</table>";
 
   /* close connection */
   $mysqli->close();
@@ -121,9 +130,20 @@ function patient_treatment() {
   
   $result = mysqli_query($mysqli, $sql);
 
+  echo "<table border='1'>
+  <tr>
+    <th>Dname</th>
+    <th>TName</th>
+  </tr>";
+
   while($row = mysqli_fetch_array($result)) {
-    echo $row['DName'] . " " . $row['TName'];
+    echo "<tr>";
+    echo "<td>" . $row['DName'] . "</td>";
+    echo "<td>" . $row['TName'] . "</td>";
+    echo "</tr>";
   }
+
+  echo "</table>";
 
   /* close connection */
   $mysqli->close();
@@ -140,9 +160,22 @@ function find_patient_doctor() {
 
   $result = mysqli_query($mysqli, $sql);
 
+  echo "<table border='1'>
+  <tr>
+    <th>HSID</th>
+    <th>HName</th>
+    <th>PName</th>
+  </tr>";
+
   while($row = mysqli_fetch_array($result)) {
-    echo $row['HSID'] . " " . $row['HName'] . " " . $row['PName'];
+    echo "<tr>";
+    echo "<td>" . $row['HSID'] . "</td>";
+    echo "<td>" . $row['HName'] . "</td>";
+    echo "<td>" . $row['PName'] . "</td>";
+    echo "</tr>";
   }
+
+  echo "</table>";
 
   /* close connection */
   $mysqli->close();
@@ -158,9 +191,20 @@ function lookup_patient_medicine() {
 
   $result = mysqli_query($mysqli, $sql);
 
+  echo "<table border='1'>
+  <tr>
+    <th>MName</th>
+    <th>Dosage</th>
+  </tr>";
+
   while($row = mysqli_fetch_array($result)) {
-    echo $row['MName'] . " " . $row['Dosage'];
+    echo "<tr>";
+    echo "<td>" . $row['MName'] . "</td>";
+    echo "<td>" . $row['Dosage'] . "</td>";
+    echo "</tr>";
   }
+
+  echo "</table>";
 
   /* close connection */
   $mysqli->close();

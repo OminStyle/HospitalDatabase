@@ -142,7 +142,7 @@ function list_patient_id_name() {
   $result = mysqli_query($mysqli, $sql);
 
   while($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . " ". $row['PName'] . "</option>";
+    echo "<option value=" . $row[$column_1] . ">PID - " . $row[$column_1] . ", Patient Name - ". $row['PName'] . "</option>";
   }
 
   /* close connection */
