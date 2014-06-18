@@ -10,7 +10,7 @@ if (!$con) {
 $sql="SELECT * FROM Take WHERE TName='".$q."'";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-striped' border='1'>
 <tr>
   <th>TName</th>
   <th>MName</th>

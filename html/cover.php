@@ -12,7 +12,8 @@
     <title>DB Hospital</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrapCover.min.css" rel="stylesheet">
+    <!-- <link href="../css/bootstrapCover.min.css" rel="stylesheet"> -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/cover.css" rel="stylesheet">
@@ -28,7 +29,6 @@
   </head>
 
   <body>
-
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -47,8 +47,8 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">Welcome to DB Hospital</h1>
-            <p class="lead">Text Text Text Text Text Text Text Text Text Text Text </p>
-            <img src="hospital1.jpg">
+            <p class="lead"></p>
+            <img src="hospital1.jpg" class="text-center">
             <p class="lead">
             <div>
               <a href="login.html" class="btn btn-lg btn-success">Login</a>
