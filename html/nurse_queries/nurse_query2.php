@@ -18,6 +18,7 @@
 
 	if(mysqli_error($con) != NULL) {
 		echo mysqli_error($con);
+		echo mysqli_errno($con);
 	}
 	else {
 		mysqli_close($con);
