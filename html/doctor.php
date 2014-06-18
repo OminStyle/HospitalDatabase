@@ -121,6 +121,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
+        <h2>Hello Dr. Yeung</h2>
           <b>Select a query:</b>
         <form>
             <select class="form-control" name="Queries" onchange="showQueryOptions(this.value)">

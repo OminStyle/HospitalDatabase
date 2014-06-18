@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>DB Hospital Login!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -30,11 +30,11 @@
       function validateLogin() {
           var email = document.forms["login"]["email"].value;
           var password = document.forms["login"]["password"].value;
-          if (email == "doctor@hospital.com" && password == "doctor") {
+          if (email == "ry@dbhospital.com" && password == "doctor") {
             return true;
-          } else if (email == "nurse@hospital.com" && password == "nurse"){
+          } else if (email == "yb@dbhospital.com" && password == "nurse"){
             return true;
-          } else if (email == "patient@hospital.com" && password == "patient"){
+          } else if (email == "kh@dbhospital.com" && password == "patient"){
             return true;
           } else {
             alert("Invalid login!");
@@ -46,11 +46,11 @@
       function goto() {
         var email = document.forms["login"]["email"].value;
           var password = document.forms["login"]["password"].value;
-          if (email == "doctor@hospital.com" && password == "doctor") {
+          if (email == "ry@dbhospital.com" && password == "doctor") {
             window.location = "doctor.php";
-          } else if (email == "nurse@hospital.com" && password == "nurse"){
+          } else if (email == "yb@dbhospital.com" && password == "nurse"){
             window.location = "nurse.php";
-          } else if (email == "patient@hospital.com" && password == "patient"){
+          } else if (email == "kh@dbhospital.com" && password == "patient"){
             window.location = "patient.php";
           }
       }
