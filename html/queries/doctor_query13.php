@@ -13,6 +13,9 @@
 	$result = mysqli_query($con,$sql);
 
 	if(mysqli_error($con) != NULL) {
+		echo $pid;
+		echo $hsid;
+		echo $did;
 		echo $sql . "<br>";
 		echo mysqli_error($con) . "<br>";
 		echo "Error Number: " . mysqli_errno($con);
