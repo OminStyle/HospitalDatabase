@@ -102,8 +102,8 @@
                 <option value="Query1">1. Find all patients from this room</option>
                 <option value="Query2">2. Insert a new patient</option>
                 <option value="Query3">3. Delete a patient</option>
-                <option value="Query4">Query4</option>
-                <option value="Query5">Query5</option>
+                <option value="Query4">4. Update patient information</option>
+                <!-- <option value="Query5">Query5</option> -->
             </select>
         </form>
       <br>
