@@ -12,17 +12,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href=home.php>Home</a></li>
+            <li><a href=home.php>Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select a User<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href=doctor.php>Doctor</a></li>
                 <li><a href=nurse.php>Nurse</a></li>
                 <li><a href=patient.php>Patient</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
