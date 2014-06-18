@@ -1,5 +1,3 @@
-Output Page
-
 <?php
 
 $column = $_POST['patient_update_info'];
