@@ -2,6 +2,9 @@
 	$pid =  $_POST["pid"];
 	$hsid = $_POST["hsid"];
 	$did = $_POST["did"];
+	echo $pid;
+	echo $hsid;
+	echo $did;
 
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
