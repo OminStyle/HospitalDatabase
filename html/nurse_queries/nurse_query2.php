@@ -17,8 +17,8 @@
 	
 	$result = mysqli_query($con,$sql);
 
-	echo mysqli_error();
 	echo mysql_error();
+	echo mysql_errno();
 	echo $result;
 	mysqli_close($con);
 
