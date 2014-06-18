@@ -97,7 +97,7 @@
       <div class="jumbotron">
           <b>Select a query:</b>
         <form>
-            <select name="Queries" onchange="showQueryOptions(this.value)">
+            <select class="form-control" name="Queries" onchange="showQueryOptions(this.value)">
                 <option value=""></option>
                 <option value="Query1">1. Find all patients from this room</option>
                 <option value="Query2">2. Insert a new patient</option>

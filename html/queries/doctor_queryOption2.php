@@ -3,7 +3,7 @@
 $q = $_GET['q'];
 echo '<b>Make a selection:</b>
 <form>
-<select name="Query2" onchange="showData(this.value, this.name)">';
+<select class="form-control" name="Query2" onchange="showData(this.value, this.name)">';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {

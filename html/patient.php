@@ -7,7 +7,7 @@
     <title>Hospital</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,11 +23,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Hospital Database</h1>
-        <p>For EECE 304</p>
-      </div>
-
-    </div> <!-- /container -->
+     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -150,3 +146,6 @@ function list_patient_id_name() {
   $mysqli->close();
 }
 ?>
+ </div>
+
+    </div> <!-- /container -->

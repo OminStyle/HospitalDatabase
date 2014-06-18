@@ -1,10 +1,9 @@
 <?php
 $q = $_GET['q'];
 
-
-echo '<b>Make a selection:</b>
-  <form>
-  <select name="Query6" onchange="showData(this.value, this.name)">';
+echo '<b>Make a selection:</b>';
+echo '<form>
+  <select class="form-control" name="Query6" onchange="showData(this.value, this.name)">';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 if (!$con) {
