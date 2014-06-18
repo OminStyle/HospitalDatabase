@@ -16,6 +16,10 @@
 	echo $sql;
 	
 	$result = mysqli_query($con,$sql);
+
+	echo mysql_error();
+	echo mysql_errno();
+	echo $result;
 	mysqli_close($con);
 
 ?>

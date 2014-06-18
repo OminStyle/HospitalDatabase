@@ -38,39 +38,39 @@
       <?php list_patient_id() ?>
       </select>
       <input type="submit">
-    </form>
+    </form><br>
 
     <form action="patient_output.php" method="post">
       Find Patient ID: <select name="patient_select_id">
       <?php list_patient_name() ?>
       </select>
       <input type="submit">
-    </form>
+    </form><br>
 
     <form action="patient_output.php" method="post">
       Find patient's disease and treatment: <select name="patient_select_id_name">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
-    </form>
+    </form><br>
 
     <form action="patient_output.php" method="post">
       Find doctor: <select name="find_doctor">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
-    </form>
+    </form><br>
 
     <form action="patient_output.php" method="post">
       Find Medicine: <select name="lookup_patient_medicine">
       <?php list_patient_id_name() ?>
       </select>
       <input type="submit">
-    </form>
+    </form><br>
     
     <form action="patient_output.php" method="post">
       <button type="submit">Find Most Famous Doctor</button>
-    </form>
+    </form><br>
   </body>
 
 
