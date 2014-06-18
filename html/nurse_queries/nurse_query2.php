@@ -11,14 +11,13 @@
 
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-	// INSERT INTO Assigned_Patient VALUES (34, 3, NULL, 1220, “Taylor Fisher”, 45, NULL, 170);
 	$sql = "INSERT INTO Assigned_Patient VALUES (" .$pid. "," .$roomNumber. ",\"" .$address. "\"," .$ccn. ",\"" .$pname. "\"," .$age. "," .$weight. "," .$height. ")";
 	echo $sql;
 	
 	$result = mysqli_query($con,$sql);
 
-	echo '<script type="text/javascript">alert("' .echo mysqli_error($con);. '"); </script>';
-	echo mysqli_errno();
+	echo mysqli_error($con);
+	echo mysqli_errno($con);
 	mysqli_close($con);
 
 ?>
