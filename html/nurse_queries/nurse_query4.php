@@ -1,4 +1,4 @@
-Output Page.
+Output Page
 
 <?php
 
@@ -10,7 +10,7 @@ echo 'values received';
 
 $con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
-$sql="UPDATE Assigned_Patient SET" . $column . "=" . $value . "WHERE PID=" . $pid;
+$sql="UPDATE Assigned_Patient SET " . $column . "=" . $value . "WHERE PID=" . $pid;
 echo $sql;
 
 $result = mysqli_query($con,$sql);
