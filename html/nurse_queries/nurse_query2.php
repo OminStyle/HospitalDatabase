@@ -19,6 +19,9 @@
 	if(mysqli_error($con) != NULL) {
 		echo mysqli_error($con);
 	}
+	else {
+		echo "Good Query";
+	}
 	mysqli_close($con);
 
 ?>
