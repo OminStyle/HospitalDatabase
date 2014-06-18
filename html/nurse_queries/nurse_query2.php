@@ -17,7 +17,7 @@
 	
 	$result = mysqli_query($con,$sql);
 
-	echo $result->connect_error;
+	echo $result->error;
 	echo 'dude';
 	echo mysql_error($con);
 	echo mysql_errno($con);
