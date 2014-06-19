@@ -18,7 +18,7 @@ $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
 <tr>
-  <th>DName</th>
+  <th>Disease Name</th>
   <th>Min Age</th>
 </tr>";
 

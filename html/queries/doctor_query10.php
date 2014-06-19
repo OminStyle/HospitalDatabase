@@ -19,7 +19,7 @@ $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
 <tr>
-  <th>DName</th>
+  <th>Disease</th>
   <th>Max Age</th>
 </tr>";
 

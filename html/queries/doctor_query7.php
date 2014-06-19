@@ -17,8 +17,8 @@ $result = mysqli_query($con,$sql);
 
 echo "<table border='1'>
 <tr>
-  <th>PID</th>
-  <th>PName</th>
+  <th>Patient ID</th>
+  <th>Patient Name</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result)) {
