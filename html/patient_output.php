@@ -154,7 +154,7 @@ function find_patient_doctor() {
 
   $pid = $_POST["find_doctor"];
 
-  $sql = "SELECT    h.HSID, h.HName, a.PID, a.PName
+  $sql = "SELECT  DISTINCT h.HSID, h.HName
           FROM    HospitalStaff h, Doctor d, Assigned_Patient a, Diagnose di
           WHERE   h.HSID=d.HSID and d.HSID=di.HSID and di.PID = a.PID AND a.PID = " . $pid;
 
@@ -164,14 +164,12 @@ function find_patient_doctor() {
   <tr>
     <th>Staff ID</th>
     <th>Staff Name</th>
-    <th>Patient Name</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
     echo "<td>" . $row['HSID'] . "</td>";
     echo "<td>" . $row['HName'] . "</td>";
-    echo "<td>" . $row['PName'] . "</td>";
     echo "</tr>";
   }
 
