@@ -67,7 +67,7 @@ function find_patient_name() {
 
   echo "<table border='1'>
   <tr>
-    <th>PName</th>
+    <th>Patient Name</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
@@ -92,7 +92,7 @@ function find_patient_id() {
 
   echo "<table border='1'>
   <tr>
-    <th>PID</th>
+    <th>Patient ID</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
@@ -132,8 +132,8 @@ function patient_treatment() {
 
   echo "<table border='1'>
   <tr>
-    <th>Dname</th>
-    <th>TName</th>
+    <th>Disease</th>
+    <th>Treatment</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
@@ -162,9 +162,9 @@ function find_patient_doctor() {
 
   echo "<table border='1'>
   <tr>
-    <th>HSID</th>
-    <th>HName</th>
-    <th>PName</th>
+    <th>Staff ID</th>
+    <th>Staff Name</th>
+    <th>Patient Name</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
@@ -193,8 +193,8 @@ function lookup_patient_medicine() {
 
   echo "<table border='1'>
   <tr>
-    <th>MName</th>
-    <th>Dosage</th>
+    <th>Medicine</th>
+    <th>Dosage(ml)</th>
   </tr>";
 
   while($row = mysqli_fetch_array($result)) {
