@@ -19,7 +19,7 @@ $result = mysqli_query($con,$sql);
 echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Disease Name</th>
-  <th>Min Age</th>
+  <th>Minimum Age</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result)) {

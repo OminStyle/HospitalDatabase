@@ -4,7 +4,6 @@
 	$con = mysqli_connect('localhost','eece304','eece304Rocks!','hospital');
 
 	$sql = 'DELETE FROM Disease WHERE DName='. "\"" . $dname . "\"";
-	echo $sql;
 	
 	$result = mysqli_query($con,$sql);
 
