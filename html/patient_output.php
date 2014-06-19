@@ -220,6 +220,8 @@ function find_most_famous_doctor() {
                                      Group By HSID)";
   $result = mysqli_query($mysqli, $sql);
 
+  echo "Doctor with the most number of patients:<br>";
+  
   while($row = mysqli_fetch_array($result)) {
     echo $row['HName'] . "<br>";
   }
