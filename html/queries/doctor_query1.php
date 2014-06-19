@@ -12,8 +12,8 @@ $result = mysqli_query($con,$sql);
 
 echo "<table class='table table-bordered table-striped' border='1'>
 <tr>
-  <th>TName</th>
-  <th>MName</th>
+  <th>Treatment Name</th>
+  <th>Medicine Name</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result)) {
