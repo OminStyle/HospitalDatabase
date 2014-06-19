@@ -22,5 +22,5 @@ mysqli_close($con);
 echo "</select>
 </form>
 <br>
-      <div id='queryData'><b>Treatment and medicine info will be listed here.</b></div>"
+      <div id='queryData'><b></b></div>"
 ?>
