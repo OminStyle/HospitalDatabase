@@ -13,9 +13,8 @@
 		echo "Error Number: " . mysqli_errno($con);
 	}
 	else {
-		echo $sql . "<br>";
 		mysqli_close($con);
-		// echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/doctor.php\"><script type=\"text/javascript\">window.location.href = \"/HospitalDatabase/html/doctor.php\"</script>";
+		echo "<meta http-equiv=\"refresh\" content=\"1;/HospitalDatabase/html/doctor.php\"><script type=\"text/javascript\">window.location.href = \"/HospitalDatabase/html/doctor.php\"</script>";
 	}
 	mysqli_close($con);
 ?>
