@@ -19,7 +19,7 @@ $result = mysqli_query($con,$sql);
 echo "<table border='1'>
 <tr>
   <th>Disease Name</th>
-  <th>Min Age</th>
+  <th>Minimum Age</th>
 </tr>";
 
 while($row = mysqli_fetch_array($result)) {
