@@ -13,7 +13,7 @@ $sql="SELECT do.department, Count(di.PID) as numPatient
       GROUP BY do.department";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Department</th>
   <th>Number of Patients</th>

@@ -15,7 +15,7 @@ AND d.PID NOT IN (SELECT    a.PID
                 WHERE   a.age < 70)";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Disease ID</th>
   <th>Disease Name</th>

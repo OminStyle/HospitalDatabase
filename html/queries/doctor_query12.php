@@ -16,7 +16,7 @@ WHERE	h2.HSID = do.HSID)
 	GROUP BY	d.DName";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Disease Name</th>
   <th>Min Age</th>

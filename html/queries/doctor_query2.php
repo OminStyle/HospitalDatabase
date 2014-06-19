@@ -13,7 +13,7 @@ $sql="SELECT d.DID, d.DName
       WHERE d.DName='".$q."'";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Disease Index</th>
   <th>Disease</th>

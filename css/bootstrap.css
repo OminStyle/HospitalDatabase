@@ -1403,7 +1403,7 @@ pre code {
 }
 table {
   max-width: 100%;
-  background-color: transparent;
+  background-color: white;
 }
 th {
   text-align: left;
@@ -3939,7 +3939,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #5ED4DF;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
@@ -4369,7 +4369,7 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: #FFFF91;
 }
 .jumbotron h1,
 .jumbotron .h1 {

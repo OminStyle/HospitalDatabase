@@ -15,7 +15,7 @@ WHERE   d.PID = a.PID
                     WHERE   department = '".$q."')";
 $result = mysqli_query($con,$sql);
 
-echo "<table border='1'>
+echo "<table class='table table-bordered table-hover'>
 <tr>
   <th>Patient ID</th>
   <th>Patient Name</th>
