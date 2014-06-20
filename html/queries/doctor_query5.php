@@ -7,12 +7,16 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT DISTINCT di.DID, di.DName
-FROM Diagnose d, Disease di
-WHERE d.DID = di.DID
-AND d.PID NOT IN (SELECT    a.PID
-                FROM    Assigned_Patient a
-                WHERE   a.age < 70)";
+$sql="select 		DISTINCT d.DID, d.DName
+from 		Disease d
+where		 not exists 
+(select *
+from Assigned_Patient a
+where a.age >= 70 and a.age is not null 
+and not exists		(select *
+		from Diagnose di
+		where di.PID = a.PID and d.DID = di.DID))
+order by 	d.DName;";
 $result = mysqli_query($con,$sql);
 
 echo "<table class='table table-bordered table-hover'>
